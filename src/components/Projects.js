@@ -15,31 +15,37 @@ export const Projects = () => {
       title: "VANIME-REVIEW WEBSITE",
       description: "Vanime is a review website that provides detailed reviews of games and anime. It is developed using PHP, HTML, CSS, JavaScript, and Bootstrap for the frontend, while the backend is powered by PHP and Python's Flask. It uses Html, CSS, JavaScript and Bootstrap for frontend, and it uses PHP and Python’s Flask for backend. ",
       imgUrl: projImg1,
+      link:"#",
     },
     {
       title: "CLOUD-BASED CONTENT DELIVERY NETWORK FRAMEWORK",
       description: "This project focuses on designing and implementing a CDN framework that utilizes dynamic cache provisioning to enhance content delivery efficiency. The aim is to optimize resource allocation and improve user experience for content providers. ",
       imgUrl: projImg2,
+      link:"#",
     },
     {
       title: "TRENDS- E-COMMERCE WEBSITE",
       description: "Trends is an e-commerce website created using Python, Django, HTML, and CSS.It provides a platform for users to browse and purchase products online. ",
       imgUrl: projImg3,
+      link:"#",
     },
     {
       title: "PCfix-BLOGGING WEBSITE",
-      description: "PCfix is a blogging website where users can share tips, tricks, and experiences related to maintaining personal computers in good working condition. The website is established using Python, Flask, HTML, CSS, JavaScript, and Bootstrap. ",
+      description: "PCfix is a blogging website where users can share tips, tricks, and experiences related to maintaining personal computers in good working condition. The website is established using Python, Flask, HTML, CSS, JavaScript, and Bootstrap.||After clicking the link if you encounter an internal error just refresh the page||",
       imgUrl: projImg4,
+      link:"https://flynnrider.pythonanywhere.com/",
     },
     {
       title: "ALFRED – VOICE AI ASSISTANT",
       description: "Alfred is a voice-based AI assistant generated using Python, Pyttsx3, and Tkinter. It greets users based on the time of day, can open applications, retrieve information from Wikipedia, play music, and provide interesting facts and jokes. ",
       imgUrl: projImg2,
+      link:"#",
     },
     {
       title: "Untitled Project",
       description: "In progress",
       imgUrl: projImg3,
+      link:"#",
     },
   ];
 
