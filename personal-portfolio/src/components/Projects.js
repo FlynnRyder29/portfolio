@@ -15,19 +15,19 @@ export const Projects = () => {
       title: "VANIME-REVIEW WEBSITE",
       description: "Vanime is a review website that provides detailed reviews of games and anime. It is developed using PHP, HTML, CSS, JavaScript, and Bootstrap for the frontend, while the backend is powered by PHP and Python's Flask. It uses Html, CSS, JavaScript and Bootstrap for frontend, and it uses PHP and Python’s Flask for backend. ",
       imgUrl: projImg1,
-      link:"#",
+      link:"https://vanime.pythonanywhere.com/",
     },
     {
       title: "CLOUD-BASED CONTENT DELIVERY NETWORK FRAMEWORK",
       description: "This project focuses on designing and implementing a CDN framework that utilizes dynamic cache provisioning to enhance content delivery efficiency. The aim is to optimize resource allocation and improve user experience for content providers. ",
       imgUrl: projImg2,
-      link:"#",
+      link:"https://drive.google.com/drive/folders/1SEq00hcUR7mBkfEhUUnvCrzLXfckavIH?usp=drive_link",
     },
     {
       title: "TRENDS- E-COMMERCE WEBSITE",
       description: "Trends is an e-commerce website created using Python, Django, HTML, and CSS.It provides a platform for users to browse and purchase products online. ",
       imgUrl: projImg3,
-      link:"#",
+      link:"https://github.com/FlynnRyder29/Trends",
     },
     {
       title: "PCfix-BLOGGING WEBSITE",
@@ -39,7 +39,7 @@ export const Projects = () => {
       title: "ALFRED – VOICE AI ASSISTANT",
       description: "Alfred is a voice-based AI assistant generated using Python, Pyttsx3, and Tkinter. It greets users based on the time of day, can open applications, retrieve information from Wikipedia, play music, and provide interesting facts and jokes. ",
       imgUrl: projImg2,
-      link:"#",
+      link:"https://github.com/FlynnRyder29/AlfredAI",
     },
     {
       title: "Untitled Project",
