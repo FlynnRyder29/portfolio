@@ -5,6 +5,7 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
+import projImg6 from "../assets/img/project-img6.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -43,10 +44,10 @@ export const Projects = () => {
       link:"https://github.com/FlynnRyder29/AlfredAI",
     },
     {
-      title: "Untitled Project",
-      description: "In progress",
-      imgUrl: projImg3,
-      link:"#",
+      title: "Task Manager Website",
+      description: "task management application that enables users to manage tasks within different columns with ease. It features a clean user interface with drag-and-drop functionality for moving tasks between columns, built using a drag-and-drop library. Users can sign up, log in, and authenticate .he backend, developed using Node.js and Express, handles task CRUD.",
+      imgUrl: projImg6,
+      link:"https://task-manager-ten-sage.vercel.app/",
     },
   ];
 
