@@ -58,7 +58,9 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Piyush`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Cloud Engineer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Enthusiastic engineering graduate with basic knowledge in coding and design. Proficient in Python, HTML 5, Django, Flask, AWS, Google Cloud and MySQL. Ability to learn new software and technologies quickly. Capability to work in teams by providing valuable support.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => document.getElementById('connect').scrollIntoView({ behavior: 'smooth' })}>
+  Let’s Connect <ArrowRightCircle size={25} />
+</button>
               </div>}
             </TrackVisibility>
           </Col>
