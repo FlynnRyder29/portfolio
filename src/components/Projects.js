@@ -35,7 +35,7 @@ export const Projects = () => {
       title: "PCfix-BLOGGING WEBSITE",
       description: "PCfix is a blogging website where users can share tips, tricks, and experiences related to maintaining personal computers in good working condition. The website is established using Python, Flask, HTML, CSS, JavaScript, and Bootstrap.||After clicking the link if you encounter an internal error just refresh the page||",
       imgUrl: projImg4,
-      link:"https://flynnrider.pythonanywhere.com/",
+      link:"https://pcfix.pythonanywhere.com/",
     },
     {
       title: "ALFRED – VOICE AI ASSISTANT",

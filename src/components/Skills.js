@@ -1,83 +1,117 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import { Container, Row, Col } from "react-bootstrap";
+import colorSharp from "../assets/img/color-sharp.png";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
+  const skillCategories = [
+    {
+      category: "Programming Languages",
+      skills: [
+        { name: "Python", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "Apex", level: 75 }
+      ]
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
+    {
+      category: "Web Technologies",
+      skills: [
+        { name: "React.js", level: 88 },
+        { name: "Django", level: 85 },
+        { name: "Flask", level: 82 },
+        { name: "HTML/CSS", level: 90 },
+        { name: "FastAPI", level: 80 }
+      ]
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
+    {
+      category: "Cloud & DevOps",
+      skills: [
+        { name: "AWS", level: 85 },
+        { name: "Google Cloud", level: 80 },
+        { name: "Azure", level: 75 },
+        { name: "Docker", level: 70 }
+      ]
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
+    {
+      category: "Databases",
+      skills: [
+        { name: "PostgreSQL", level: 85 },
+        { name: "MySQL", level: 88 },
+        { name: "Redis", level: 75 },
+        { name: "DynamoDB", level: 70 }
+      ]
+    },
+    {
+      category: "Tools & Platforms",
+      skills: [
+        { name: "Git", level: 90 },
+        { name: "Power BI", level: 85 },
+        { name: "Salesforce", level: 80 },
+        { name: "JIRA", level: 75 },
+        { name: "Figma", level: 70 }
+      ]
+    },
+    {
+      category: "Data & Analytics",
+      skills: [
+        { name: "NumPy", level: 85 },
+        { name: "Matplotlib", level: 80 },
+        { name: "SQLAlchemy", level: 82 },
+        { name: "Metabase", level: 75 }
+      ]
     }
-  };
+  ];
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>• Programming:  1.Advanced: Python, C, SQL. 2. Intermediate: PHP, MySQL, HTML, CSS, ReactJS
-                          3. Beginner: Java, JavaScript
-                          • Tools: 1. Advanced: Django, Flask, Tkinter, Matplotlib, AWS
-                          2. Intermediate: MATLAB, NumPy, GCP
-                          3.Beginner: VMware
-                          • Theory: 1. Advanced: Web Development, Cloud Computing 2. Intermediate: Data Analysis, Database Management, Operating System
-                          • Software’s: 1. Intermediate: Adobe Premiere Pro, Wondershare Filmora, Blender, XAMPP, Figma, PyCharm, Visual Studio
-                          2. Beginner: Adobe Photoshop</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Python</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Google Cloud</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>AWS</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Django</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Flask</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>ReactJS</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>SQL</h5>
-                            </div>
-                        </Carousel>
+      <Container>
+        <Row>
+          <Col size={12}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <div className="skill-bx">
+                    <h2>Technical Skills</h2>
+                    <p>A comprehensive overview of my technical expertise across various domains of software development, cloud technologies, and data analytics.</p>
+                    
+                    <div className="skills-grid">
+                      {skillCategories.map((category, categoryIndex) => (
+                        <div 
+                          key={categoryIndex} 
+                          className={`skill-category ${isVisible ? "animate__animated animate__slideInUp" : ""}`}
+                          style={{animationDelay: `${categoryIndex * 0.1}s`}}
+                        >
+                          <h3 className="category-title">{category.category}</h3>
+                          <div className="skills-list">
+                            {category.skills.map((skill, skillIndex) => (
+                              <div key={skillIndex} className="skill-item">
+                                <div className="skill-info">
+                                  <span className="skill-name">{skill.name}</span>
+                                  <span className="skill-percentage">{skill.level}%</span>
+                                </div>
+                                <div className="skill-bar">
+                                  <div 
+                                    className="skill-progress"
+                                    style={{
+                                      width: `${skill.level}%`,
+                                      transitionDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s`
+                                    }}
+                                  ></div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+              }
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+      <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
-  )
-}
+  );
+};
